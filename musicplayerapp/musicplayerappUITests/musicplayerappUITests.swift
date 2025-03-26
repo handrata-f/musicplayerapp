@@ -6,38 +6,58 @@
 //
 
 import XCTest
+import Alamofire
 
 final class musicplayerappUITests: XCTestCase {
+    var app: XCUIApplication!
 
     override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-
-        // In UI tests it is usually best to stop immediately when a failure occurs.
         continueAfterFailure = false
-
-        // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
+        app = XCUIApplication()
+        app.launch()
     }
 
     override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        app.terminate()
     }
 
-    @MainActor
-    func testExample() throws {
-        // UI tests must launch the application that they test.
-        let app = XCUIApplication()
-        app.launch()
-
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testSearchAndPlaySong() {
+        let searchField = app.textFields["textFieldSearch"]
+        XCTAssertTrue(searchField.exists, "Search text field should exist")
+        
+        searchField.tap()
+        searchField.typeText("Shape of You")
+        app.keyboards.buttons["Return"].tap()
+        
+        let firstCell = app.tables.cells.element(boundBy: 0)
+        XCTAssertTrue(firstCell.waitForExistence(timeout: 5), "Search results should be displayed")
+        
+        firstCell.tap()
+        
+        let playPauseButton = app.buttons["buttonPlayPause"]
+        XCTAssertTrue(playPauseButton.exists, "Play/Pause button should exist")
+        playPauseButton.tap()
     }
-
-    @MainActor
-    func testLaunchPerformance() throws {
-        if #available(macOS 10.15, iOS 13.0, tvOS 13.0, watchOS 7.0, *) {
-            // This measures how long it takes to launch your application.
-            measure(metrics: [XCTApplicationLaunchMetric()]) {
-                XCUIApplication().launch()
-            }
-        }
+    
+    func testPlayPauseFunctionality() {
+        let playPauseButton = app.buttons["buttonPlayPause"]
+        XCTAssertTrue(playPauseButton.exists, "Play/Pause button should exist")
+        
+        playPauseButton.tap()
+        XCTAssertTrue(playPauseButton.isSelected, "Music should be playing")
+        
+        playPauseButton.tap()
+        XCTAssertFalse(playPauseButton.isSelected, "Music should be paused")
+    }
+    
+    func testNextAndPreviousButtons() {
+        let nextButton = app.buttons["buttonNext"]
+        let previousButton = app.buttons["buttonPrevious"]
+        
+        XCTAssertTrue(nextButton.exists, "Next button should exist")
+        XCTAssertTrue(previousButton.exists, "Previous button should exist")
+        
+        nextButton.tap()
+        previousButton.tap()
     }
 }

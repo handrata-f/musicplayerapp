@@ -7,7 +7,39 @@
 		<key>musicplayerapp.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
+		<key>musicplayerappTests.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+			<key>orderHint</key>
 			<integer>0</integer>
+		</dict>
+		<key>musicplayerappUITests.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>671DF5632D9259A4004AB19A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>671DF5792D9259A7004AB19A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>671DF5832D9259A7004AB19A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>

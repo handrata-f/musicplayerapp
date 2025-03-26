@@ -6,6 +6,11 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		6758B9432D93E3CE009A9AEB /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 6758B9422D93E3CE009A9AEB /* Alamofire */; };
+		6758B94D2D94118E009A9AEB /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 6758B94C2D94118E009A9AEB /* Alamofire */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		671DF57B2D9259A7004AB19A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -23,6 +28,19 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		6758B9472D93E3E5009A9AEB /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		671DF5642D9259A4004AB19A /* musicplayerapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = musicplayerapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		671DF57A2D9259A7004AB19A /* musicplayerappTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = musicplayerappTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -37,6 +55,32 @@
 			);
 			target = 671DF5632D9259A4004AB19A /* musicplayerapp */;
 		};
+		6758B89B2D93AE95009A9AEB /* Exceptions for "musicplayerapp" folder in "musicplayerappTests" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				"/Localized: Main.storyboard",
+				Cell/MusicListViewCell.swift,
+				Cell/MusicListViewCell.xib,
+				Manager/APIManager.swift,
+				Model/MusicListModel.swift,
+				MusicPlaylistViewController.swift,
+				Utilities.swift,
+			);
+			target = 671DF5792D9259A7004AB19A /* musicplayerappTests */;
+		};
+		6758B8A52D93BA76009A9AEB /* Exceptions for "musicplayerapp" folder in "musicplayerappUITests" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				"/Localized: Main.storyboard",
+				Cell/MusicListViewCell.swift,
+				Cell/MusicListViewCell.xib,
+				Manager/APIManager.swift,
+				Model/MusicListModel.swift,
+				MusicPlaylistViewController.swift,
+				Utilities.swift,
+			);
+			target = 671DF5832D9259A7004AB19A /* musicplayerappUITests */;
+		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -44,6 +88,8 @@
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
 				671DF58C2D9259A7004AB19A /* Exceptions for "musicplayerapp" folder in "musicplayerapp" target */,
+				6758B89B2D93AE95009A9AEB /* Exceptions for "musicplayerapp" folder in "musicplayerappTests" target */,
+				6758B8A52D93BA76009A9AEB /* Exceptions for "musicplayerapp" folder in "musicplayerappUITests" target */,
 			);
 			path = musicplayerapp;
 			sourceTree = "<group>";
@@ -65,6 +111,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6758B9432D93E3CE009A9AEB /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,6 +126,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6758B94D2D94118E009A9AEB /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,6 +139,7 @@
 				671DF5662D9259A4004AB19A /* musicplayerapp */,
 				671DF57D2D9259A7004AB19A /* musicplayerappTests */,
 				671DF5872D9259A7004AB19A /* musicplayerappUITests */,
+				6758B9412D93E3CE009A9AEB /* Frameworks */,
 				671DF5652D9259A4004AB19A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -105,6 +154,13 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		6758B9412D93E3CE009A9AEB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -115,6 +171,7 @@
 				671DF5602D9259A4004AB19A /* Sources */,
 				671DF5612D9259A4004AB19A /* Frameworks */,
 				671DF5622D9259A4004AB19A /* Resources */,
+				6758B9472D93E3E5009A9AEB /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -125,6 +182,7 @@
 			);
 			name = musicplayerapp;
 			packageProductDependencies = (
+				6758B9422D93E3CE009A9AEB /* Alamofire */,
 			);
 			productName = musicplayerapp;
 			productReference = 671DF5642D9259A4004AB19A /* musicplayerapp.app */;
@@ -171,6 +229,7 @@
 			);
 			name = musicplayerappUITests;
 			packageProductDependencies = (
+				6758B94C2D94118E009A9AEB /* Alamofire */,
 			);
 			productName = musicplayerappUITests;
 			productReference = 671DF5842D9259A7004AB19A /* musicplayerappUITests.xctest */;
@@ -208,6 +267,9 @@
 			);
 			mainGroup = 671DF55B2D9259A4004AB19A;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				6758B8F42D93E0BE009A9AEB /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 671DF5652D9259A4004AB19A /* Products */;
 			projectDirPath = "";
@@ -287,16 +349,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 2LKC6JNN37;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = musicplayerapp/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Music Player";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -304,6 +368,11 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.test.musicplayerapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -315,16 +384,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 2LKC6JNN37;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = musicplayerapp/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Music Player";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -332,6 +403,11 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.test.musicplayerapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -461,14 +537,19 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Development";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 2LKC6JNN37;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.test.musicplayerappTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -480,14 +561,19 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Development";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 2LKC6JNN37;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.test.musicplayerappTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -500,7 +586,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 2LKC6JNN37;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.test.musicplayerappUITests;
@@ -517,7 +603,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 2LKC6JNN37;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.test.musicplayerappUITests;
@@ -569,6 +655,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		6758B8F42D93E0BE009A9AEB /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.10.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		6758B9422D93E3CE009A9AEB /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6758B8F42D93E0BE009A9AEB /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		6758B94C2D94118E009A9AEB /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6758B8F42D93E0BE009A9AEB /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 671DF55C2D9259A4004AB19A /* Project object */;
 }
